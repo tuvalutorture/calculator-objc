@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                clearCalculation = id; 
+                flipSign = id; 
+                invokeNumberButton = id; 
+                invokeOperatorButton = id; 
+                memoryAdd = id; 
+                memoryClear = id; 
+                memoryRecall = id; 
+                memorySubtract = id; 
+                performCalculation = id; 
+            }; 
+            CLASS = CalculatorController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {display = NSTextField; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = NSLevelIndicator; LANGUAGE = ObjC; SUPERCLASS = NSControl; }
+    ); 
+    IBVersion = 1; 
+}
