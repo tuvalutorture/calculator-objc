@@ -42,6 +42,7 @@
 }
 
 - (IBAction)invokeOperatorButton:	(id)sender {
+	if (!clearable && currentOperator != nil) [self performCalculation:sender]; 
 	wasLastButtonCalculation = NO;
 	clearable = YES; priorBuffer = [display doubleValue];
 	currentBuffer = priorBuffer;
@@ -68,12 +69,7 @@
 	clearable = YES; wasLastButtonCalculation = YES;
 }
 
-- (IBAction)flipSign:				(id)sender {
-	if ([display doubleValue] == 0.0) return;
-	if ([[[display stringValue] substringToIndex:1] isEqualToString:@"-"]) [display setStringValue:[[display stringValue] substringFromIndex:1]];
-	else [display setStringValue:[[NSString stringWithString:@"-"] stringByAppendingString:[display stringValue]]];
-}
-
+- (IBAction)flipSign:				(id)sender { [display setDoubleValue:[display doubleValue] * -1]; }
 - (IBAction)memoryClear:			(id)sender { wasLastButtonCalculation = NO; memory = 0.0; }
 - (IBAction)memoryAdd:				(id)sender { wasLastButtonCalculation = NO; memory += [display doubleValue]; }
 - (IBAction)memorySubtract:			(id)sender { wasLastButtonCalculation = NO; memory -= [display doubleValue]; }
