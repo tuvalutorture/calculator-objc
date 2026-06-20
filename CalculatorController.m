@@ -1,11 +1,3 @@
-//
-//  CalculatorController.m
-//  shittyCalculator
-//
-//  Created by Xander Gomez on 20/06/2005.
-//  Copyright 2005 __MyCompanyName__. All rights reserved.
-//
-
 #import "CalculatorController.h"
 #include <math.h>
 
