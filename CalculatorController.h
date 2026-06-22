@@ -1,4 +1,5 @@
-#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
+#import <Foundation/Foundation.h>
 
 @interface CalculatorController : NSObject {
 	IBOutlet NSTextField* display;
@@ -14,6 +15,9 @@
 + (id)subtractNumber:	(NSNumber*)num1 with:(NSNumber*)num2;
 + (id)divideNumber:		(NSNumber*)num1 with:(NSNumber*)num2;
 + (id)multiplyNumber:	(NSNumber*)num1 with:(NSNumber*)num2;
+
+- (void)updateDisplay:(double)number;
+- (double)getDisplayNum;
 
 - (IBAction)invokeNumberButton:		(id)sender;
 - (IBAction)invokeOperatorButton:	(id)sender;
